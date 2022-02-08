@@ -11,10 +11,22 @@ sEMG signal from Myo Band on a user's forearm is used to decode subtle input ges
 
 ## Dataset description
 
-{participant}/{year}/{scenario}/{gesture}
+_data_ directory contains files named according to the following convention:
 
-12 participants,
-6 of them 2021 and 2020, 6 only 2020
-freehand, cylindrical and tripod grasp scenarios 
+_**{participant} _ {year} _ {grasp} _ {gesture}**_
+
+where:
+
+_participant_ is in **{p0 .. p6}**,
+
+_year_ is in **{2020, 2021}**,
+
+_grasp_ is in **{freehand, cylindrical, tripod}**
+
+_gesture_ is in **{idle, topRow, midRow, botRow, suggestion}**
+
+Each file is a serialized array of 30 seconds long sEMG record captured on MyoBand at 200 Hz. 
+
+For the graphical description please refer to the figure below. 
 
 ![Capture](https://user-images.githubusercontent.com/32867191/151349886-f2942f1e-f5f0-44a6-b12d-0307b6ddbc8a.PNG)
